@@ -19,11 +19,11 @@
     <span class="resultadoSumaClase"></span>
     <span class="resultadoSumaClase"></span>
     <p id="resultadoResta"></p>
-    
+
     <script type="text/javascript" charset="utf-8">
       var entrada1 = window.prompt("Escriba el primer valor: ", "0");
       var entrada2 = window.prompt("Escriba el segundo valor: ", "0");
-    
+
       var a = parseFloat(entrada1);
       var b = parseFloat(entrada2);
       var c = a + b;
@@ -32,8 +32,15 @@
       // alert("La diferencia de los valores es: " + d);
       document.getElementById("resultadoSuma").innerHTML = "<b>La suma de valores\
  es: " + c + "</b>";
-      document.getElementById("resultadoResta").innerHTML = "<b>La diferencia de valores\
+      document.getElementById("resultadoResta").innerText = "<b>La diferencia de valores\
  es: " + d + "</b>";
+
+      spans = document.getElementsByClassName("resultadoSumaClase");
+      for (var i = 0; i < spans.length; i++) {
+        document.getElementsByClassName("resultadoSumaClase")[i].innerHTML = "<b>La diferencia de valores\
+ es: " + d + "</b><br/>";
+      }
+
     </script>
   </body>
 </html>
